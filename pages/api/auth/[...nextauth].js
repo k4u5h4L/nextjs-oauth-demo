@@ -15,7 +15,7 @@ export default (req, res) =>
             secret: process.env.JWT_SECRET,
         },
         callbacks: {
-            async redirect(url, baseUrl) {
+            async redirect({url, baseUrl}) {
                 return "/";
             },
         },
